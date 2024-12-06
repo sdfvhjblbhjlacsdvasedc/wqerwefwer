@@ -1,7 +1,4 @@
-[apt-upgrades]
-command=~/.config/i3blocks/modules/apt-upgrades
-signal=1
-interval=once
+
 
 [bandwidth3]
 command=~/.config/i3blocks/modules/bandwidth3
@@ -62,11 +59,6 @@ interval=3600
 #NEXT_MONTH_TEXT=» next month »
 #ROFI_CONFIG_FILE=/dev/null
 
-#[wifi]
-#command=~/.config/i3blocks/modules/wifi
-#label=󰖩:
-#INTERFACE=enp0s3
-#interval=60
 
 [systemctl]
 command=~/.config/i3blocks/modules/systemctlapache2
