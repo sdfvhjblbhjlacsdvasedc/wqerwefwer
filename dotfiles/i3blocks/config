@@ -1,0 +1,111 @@
+[apt-upgrades]
+command=~/.config/i3blocks/modules/apt-upgrades
+signal=1
+interval=once
+
+[bandwidth3]
+command=~/.config/i3blocks/modules/bandwidth3
+interval=persist
+markup=pango
+
+[battery2]
+command=~/.config/i3blocks/modules/battery2
+markup=pango
+interval=30
+
+[memory]
+command=~/.config/i3blocks/modules/memory
+label=󰍛 m.ram:
+interval=30
+
+[memory]
+command=~/.config/i3blocks/modules/memory
+label=󰾶 swap:
+instance=swap
+interval=30
+
+[kbdd_layout]
+label=󰌌 keyb:
+command=~/.config/i3blocks/modules/kbdd_layout
+interval=persist
+
+[dunst]
+command=~/.config/i3blocks/modules/dunst
+label=󰂜
+interval=once
+format=json
+markup=pango
+#min_width=50
+#align=center
+
+[volume]
+command=~/.config/i3blocks/modules/volume
+label=󰕾 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+#NATURAL_MAPPING=0
+
+[rofi-calendar]
+command=~/.config/i3blocks/modules/rofi-calendar
+interval=3600
+#BAR_POSITION=top
+#WEEK_START=monday
+#DATEFTM=+%a %d %b %Y
+#SHORTFMT=+%d/%m/%Y
+#LABEL= 
+#FONT=Monospace 10
+#LEFTCLICK_PREV_MONTH=false
+#PREV_MONTH_TEXT=« previous month «
+#NEXT_MONTH_TEXT=» next month »
+#ROFI_CONFIG_FILE=/dev/null
+
+#[wifi]
+#command=~/.config/i3blocks/modules/wifi
+#label=󰖩:
+#INTERFACE=enp0s3
+#interval=60
+
+[systemctl]
+command=~/.config/i3blocks/modules/systemctlapache2
+label=
+interval=1
+markup=pango
+instance=apache2
+
+[systemctl]
+command=~/.config/i3blocks/modules/systemctl
+label=
+interval=1
+markup=pango
+instance=ssh
+
+[systemctl]
+command=~/.config/i3blocks/modules/systemctltor
+label=
+interval=1
+markup=pango
+instance=tor
+
+
+[shutdown_menu]
+full_text= Quit
+# If you are using FontAwesome, we recommend the power-off icon:
+# http://fontawesome.io/icon/power-off/
+command=~/.config/i3blocks/modules/shutdown_menu
+#FG_COLOR=#bbbbbb
+#BG_COLOR=#111111
+#HLFG_COLOR=#111111
+#HLBG_COLOR=#bbbbbb
+#BORDER_COLOR=#222222
+#ROFI_TEXT=Menu:
+#ROFI_OPTIONS=-width 11 -location 3 -hide-scrollbar -bw 2
+#ZENITY_TITLE=Menu
+#ZENITY_TEXT=Action:
+#ZENITY_OPTIONS=--column= --hide-header
+#ENABLE_CONFIRMATIONS=true (must be true or false)
+#LAUNCHER=rofi (must be rofi or zenity)
+#LOCKSCRIPT=i3lock --color=${BG_COLOR#"#"}
+

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Serviço a ser monitorado
+SERVICE=$BLOCK_INSTANCE
+# Cores
+INACTIVE_COLOR=#888888
+ACTIVE_COLOR=#e20000
+# Strings de exibição
+ACTIVE="<span foreground=\"$ACTIVE_COLOR\">$SERVICE</span>"
+INACTIVE="<span foreground=\"$INACTIVE_COLOR\"><s>$SERVICE</s></span>"
+
+# Verifica o status do serviço
+if systemctl is-active --quiet "$SERVICE"; then
+    echo "$ACTIVE"
+else
+    echo "$INACTIVE"
+fi
+
+# Trata cliques
+if [ "$BLOCK_BUTTON" == '1' ]; then
+    if systemctl is-active --quiet "$SERVICE"; then
+        systemctl stop "$SERVICE"
+    else
+        systemctl start "$SERVICE"
+    fi
+fi
+
